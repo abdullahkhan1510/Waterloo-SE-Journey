@@ -1,6 +1,6 @@
 # Ask user for their name and greet them
-name = input("What is your name ? ")
-# Remove any extra whitespace from input
-name = name.strip().title()
+name = input("What is your name ? ").strip().title()
+# split input into two parts and take first part
+first, last = name.split(" ")
 
-print(f"Hello, {name}")
+print(f"Hello, {first}")
