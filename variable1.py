@@ -1,5 +1,6 @@
 # Ask user for their name and greet them
 name = input("What is your name ? ")
 # Remove any extra whitespace from input
-name = name.strip() 
+name = name.strip().title()
+
 print(f"Hello, {name}")
