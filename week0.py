@@ -1,6 +1,8 @@
-def hello():
-    print("hello", end = " ")
+def main():
+    x = int(input("What is your x value?"))
+    print(" X squared is equal to: ",  square(x))
 
-name = input("What's your name?")
-hello()
-print(name)
+def square(n):
+    return n**2
+
+main()
