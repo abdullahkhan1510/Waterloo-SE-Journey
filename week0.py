@@ -1,3 +1,6 @@
-mass = int(input("What is your mass?"))
-energy = mass * 300000000**2
-print("Your energy is", energy ," Joules")
+def to_minutes():
+    hrs = int(input("How many hours?"))
+    return hrs * 60
+
+
+print(to_minutes(), "minutes")
