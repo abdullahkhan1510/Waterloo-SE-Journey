@@ -1,11 +1,15 @@
-def make_number():
-    num = input("What is your number, with a dollar sign?")
-    clean_num = num.replace("$","")
-    return clean_num
-def final_num(n):
-    num = float(n) / 100
-    return num
+def get_value():
+    # .strip("$") specifically targets the dollar sign at the start/end
+    user_input = input("Enter a value with a dollar sign ($): ")
+    return user_input.strip("$")
 
-noperc = make_number()
-dec = final_num(noperc)
-print(dec)
+def calculate_decimal(n):
+    # Using the /= operator is a sleek way to divide the variable by 100
+    value = float(n)
+    value /= 100
+    return value
+
+# Execution
+clean_val = get_value()
+result = calculate_decimal(clean_val)
+print(result)
