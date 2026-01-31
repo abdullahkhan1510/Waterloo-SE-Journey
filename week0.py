@@ -1,15 +1,17 @@
-def get_value():
-    # .strip("$") specifically targets the dollar sign at the start/end
-    user_input = input("Enter a value with a dollar sign ($): ")
-    return user_input.strip("$")
+def percentage():
+    # .strip("%") removes the percentage symbol from either end
+    userinput = input("Enter a percentage (e.g., 85%): ")
+    return userinput.strip("%")
 
-def calculate_decimal(n):
-    # Using the /= operator is a sleek way to divide the variable by 100
-    value = float(n)
-    value /= 100
-    return value
+def convert(n):
+    # Converts the whole number percentage into a decimal rate
+    # Using the /= operator keeps the logic concise
+    rate = float(n)
+    rate /= 100
+    return rate
 
 # Execution
-clean_val = get_value()
-result = calculate_decimal(clean_val)
-print(result)
+clean_pct = percentage()
+decimal_rate = convert(clean_pct)
+
+print(f"The decimal rate is: {decimal_rate}")
